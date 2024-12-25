@@ -7,7 +7,7 @@
  * @brief Implements HCCAPX serializer
  */
 #include "hccapx_serializer.h"
-
+#include <arpa/inet.h>
 #include <stdint.h>
 #include <string.h>
 #define LOG_LOCAL_LEVEL ESP_LOG_DEBUG
@@ -23,6 +23,7 @@
  * @see Ref: https://hashcat.net/wiki/doku.php?id=hccapx
  */
 //@{
+
 #define HCCAPX_SIGNATURE 0x58504348
 #define HCCAPX_VERSION 4
 #define HCCAPX_KEYVER_WPA 1
