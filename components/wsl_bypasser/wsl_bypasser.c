@@ -40,9 +40,11 @@ static const uint8_t deauth_frame_default[] = {
  * @attention This function is not meant to be called!
  * @see Project with original idea/implementation https://github.com/GANESH-ICMC/esp32-deauther
  */
-int ieee80211_raw_frame_sanity_check(int32_t arg, int32_t arg2, int32_t arg3){
-    return 0;
+void wsl_ieee80211_raw_frame_sanity_check(void *frame, int len) {
+    // function body remains the same
 }
+
+
 
 void wsl_bypasser_send_raw_frame(const uint8_t *frame_buffer, int size){
     ESP_ERROR_CHECK(esp_wifi_80211_tx(WIFI_IF_AP, frame_buffer, size, false));
